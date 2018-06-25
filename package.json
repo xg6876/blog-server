@@ -1,0 +1,30 @@
+{
+  "name": "blog-server",
+  "version": "1.0.0",
+  "description": "blog项目服务端代码",
+  "main": "index.js",
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "koa": "^2.5.1",
+    "koa-art-template": "^1.1.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.17.5"
+  },
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xg6876/blog-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xg6876/blog-server/issues"
+  },
+  "homepage": "https://github.com/xg6876/blog-server#readme"
+}
