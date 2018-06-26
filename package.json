@@ -3,19 +3,9 @@
   "version": "1.0.0",
   "description": "blog项目服务端代码",
   "main": "index.js",
-  "dependencies": {
-    "art-template": "^4.12.2",
-    "koa": "^2.5.1",
-    "koa-art-template": "^1.1.1",
-    "koa-router": "^7.4.0",
-    "koa-static": "^5.0.0"
-  },
-  "devDependencies": {
-    "cross-env": "^5.2.0",
-    "nodemon": "^1.17.5"
-  },
   "scripts": {
-    "start": "nodemon src/server.js"
+    "dev:client": "cross-env NODE_ENV=development node build/webpack.dev.conf.js",
+    "dev:server": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +16,36 @@
   "bugs": {
     "url": "https://github.com/xg6876/blog-server/issues"
   },
-  "homepage": "https://github.com/xg6876/blog-server#readme"
+  "homepage": "https://github.com/xg6876/blog-server#readme",
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "koa": "^2.5.1",
+    "koa-art-template": "^1.1.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "colors": "^1.3.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "memory-fs": "^0.4.1",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.5",
+    "postcss-loader": "^2.0.9",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.12.0",
+    "webpack-merge": "^4.1.1"
+  }
 }

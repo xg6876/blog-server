@@ -6,15 +6,15 @@ const serve = require('koa-static')
 const app = new Koa();
 
 render(app, {
-  root: path.join(__dirname, 'views'),
+  root: path.join(__dirname, '../dist/views'),
   extname: '.art',
   debug: process.env.NODE_ENV !== 'production'
 });
 
-app.use(serve(path.join(__dirname, 'views')));
+app.use(serve(path.join(__dirname, '../dist')));
 
 app.use(async function (ctx) {
-  await ctx.render('main');
+  await ctx.render('index');
 });
 
-app.listen(7788);
+app.listen(3000);
