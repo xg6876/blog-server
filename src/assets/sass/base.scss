@@ -1,7 +1,7 @@
 html,body{
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Microsoft YaHei';
 }
 
 *{
@@ -12,68 +12,4 @@ ul{
     list-style: none;
     padding: 0;
     margin: 0;
-}
-.container-wrap{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-}
-
-.menu-wrap{
-    background:linear-gradient(#27ADD0, #1D87BB 65%, #105799);
-    float: left;
-    height: 100%;
-    width: 260px;
-}
-.right-wrap{
-    height: 100%;
-    margin-left: 260px;
-    position: relative;
-}
-.header-wrap{
-    height: 60px;
-    border-bottom: 1px solid #D1D2D4;
-}
-.main-wrap{
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    bottom: 0;
-}
-.list-wrap{
-    width: 300px;
-    height: 100%;
-    border-right: 1px solid #D1D2D4;
-    overflow-y: auto;
-    float: left;
-}
-.list-wrap::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 5px;     /*高宽分别对应横竖滚动条的尺寸*/
-}
-.list-wrap::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-    border-radius: 4px;
-    background: #D1D2D4;
-}
-.list-wrap::-webkit-scrollbar-track {/*滚动条里面轨道*/
-    border-radius: 4px;
-    background: #EDEDED;
-}
-.search-wrap{
-    height: 70px;
-    border-bottom: 1px solid #D1D2D4;
-}
-
-.list-content{
-    
-}
-
-.list-content li{
-    height: 75px;
-    border-bottom: 1px solid #D1D2D4;
-}
-
-.main-content{
-    height: 100%;
-    margin-left: 300px;
 }

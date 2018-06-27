@@ -1,0 +1,25 @@
+<div class="menu-wrap">
+    <div class="logo-wrap"></div>
+    <ul>
+        <li class="menu-item">
+            <span class="iconfont icon-article"></span>
+            <a>文章管理</a>
+        </li>
+        <li class="menu-item">
+            <span class="iconfont icon-tag"></span>
+            <a>标签管理</a>
+        </li>
+        <li class="menu-item">
+            <span class="iconfont icon-profile"></span>
+            <a>个人中心</a>
+        </li>
+        <li class="menu-item">
+            <span class="iconfont icon-archives"></span>
+            <a>Comments</a>
+        </li>
+        <li class="menu-item">
+            <span class="iconfont icon-profile"></span>
+            <a>Reading List</a>
+        </li>
+    </ul>
+</div>

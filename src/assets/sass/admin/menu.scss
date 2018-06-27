@@ -1,0 +1,24 @@
+.menu-wrap{
+    height: 100%;
+    background:linear-gradient(#27ADD0, #1D87BB 65%, #105799);
+    .logo-wrap{
+        height: 135px;
+    }
+    .menu-item{
+        color: white;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        cursor: pointer;
+        .iconfont{
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        a{
+            margin-left: 18px;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}

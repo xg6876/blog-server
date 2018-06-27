@@ -1,0 +1,26 @@
+.container{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    .left-wrap{
+        float: left;
+        height: 100%;
+        width: 260px;
+    }
+    .right-wrap{
+        height: 100%;
+        margin-left: 260px;
+        position: relative;
+    }
+    .header-wrap{
+        height: 60px;
+        border-bottom: 1px solid #D1D2D4;
+    }
+    .main-wrap{
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        bottom: 0;
+    }
+}

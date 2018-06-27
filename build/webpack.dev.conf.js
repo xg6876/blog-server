@@ -33,7 +33,7 @@ const config = merge(baseConfig, {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.ModuleConcatenationPlugin(),
@@ -48,45 +48,59 @@ const config = merge(baseConfig, {
                 NODE_ENV: JSON.stringify('development')
             }
         }),
-        new CopyWebpackPlugin([
-            {
-                from: resolve(__dirname, '../src/views'),
-                to: resolve(__dirname, '../dist/views'),
-                ignore: ['.*']
-            }
-        ]),
+        // new CopyWebpackPlugin([
+        //     {
+        //         from: resolve(__dirname, '../src/views/includes'),
+        //         to: resolve(__dirname, '../dist/views/includes'),
+        //         ignore: ['.*']
+        //     }
+        // ]),
+        // new HTMLPlugin({
+        //     filename: '../dist/views/layout.art',
+        //     template: resolve(__dirname, '../src/views/layout.art'),
+        //     inject: true,
+        //     chunksSortMode: 'dependency',
+        //     chunks: ['runtime']
+        // }),
         new HTMLPlugin({
-            filename: '../src/views/admin/index.art',
-            template: resolve(__dirname, '../src/views/admin/index.art'),
+            filename: '../dist/views/admin/articles.art',
+            template: resolve(__dirname, '../src/views/admin/articles.art'),
             inject: true,
             chunksSortMode: 'dependency',
-            chunks: ['runtime', 'index']
+            chunks: ['runtime','index']
         })
 
     ],
-    watch: true,
-    watchOptions: {
-        ignored: /node_modules/,
-        // 监听到变化发生后会等300ms再去执行动作，防止文件更新太快导致重新编译频率太高
-        // 默认为 300ms  
-        aggregateTimeout: 800,
-        // 判断文件是否发生变化是通过不停的去询问系统指定文件有没有变化实现的
-        // 默认每秒轮询1000次
-        poll: 1000
-    }
+    // watch: true,
+    // watchOptions: {
+    //     ignored: /node_modules/,
+    //     // 监听到变化发生后会等300ms再去执行动作，防止文件更新太快导致重新编译频率太高
+    //     // 默认为 300ms  
+    //     aggregateTimeout: 800,
+    //     // 判断文件是否发生变化是通过不停的去询问系统指定文件有没有变化实现的
+    //     // 默认每秒轮询1000次
+    //     poll: 1000
+    // }
 })
+
 
 const webpackCompiler = webpack(config);
 // const mfs = new MemoryFS();
 // webpackCompiler.outputFileSystem = mfs;
 
-webpackCompiler.watch({}, (err, stats) => {
+webpackCompiler.watch({
+    ignored: /node_modules/,
+    aggregateTimeout: 800,
+    poll: 1000
+}, (err, stats) => {
     if (err) throw err
-    console.log(stats.errors)
-    console.log(stats.warnings)
     stats = stats.toJson()
-    stats.errors.forEach(err => console.log(err))
-    stats.warnings.forEach(warn => console.warn(warn))
+    if(stats.warnings.length){
+        stats.warnings.forEach(warn => console.warn(warn))
+    }
+    if(stats.errors.length){
+        stats.errors.forEach(err => console.error(err))
+    }
     console.log('generate success'.green)
 })
 

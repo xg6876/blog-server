@@ -7,7 +7,7 @@ const resolve = (...paths) => {
 const config = {
     target: 'web',
     entry: {
-        index:resolve('../src/assets/js/index.js')
+        index:resolve('../src/assets/js/admin/articles.js')
     },
     output: {
         filename: '[name].js',
@@ -22,23 +22,41 @@ const config = {
                 include: [resolve(__dirname, '../src/assets/js')],
             },
             {
+                test: /\.art$/,
+                loader: 'art-template-loader',
+                include: [resolve(__dirname, '../src/views')],
+            },
+            {
+                test: /\.css/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(gif|jpg|jpeg|png|svg)$/,
                 use: [
                     {
                         loader: 'url-loader',
                         options: {
                             limit: 1024,
-                            name: '[path]/[name].[hash:8].[ext]'
+                            name: '[path]/[name].[hash:7].[ext]'
                         }
                     }
                 ]
             },
             {
-                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                test: /\.(woff|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 1024,
-                    name: '[path]/[name].[hash:8].[ext]'
+                    name: '[path]/[name].[hash:7].[ext]'
                 }
             }
         ]

@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{block 'title'}}教育{{/block}}</title>
+    <title>Blog控制台</title>
 </head>
+
 <body>
-    {{block 'content'}}{{/block}}
+    <div class="container">
+        <div class="left-wrap">
+            {{include './menu.art'}}
+        </div>
+        <div class="right-wrap">
+            <div class="header-wrap"></div>
+            <div class="main-wrap">
+                {{block 'content'}}{{/block}}
+            </div>
+        </div>
+    </div>
     {{include '../includes/script.art'}}
 </body>
 

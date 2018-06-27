@@ -1,0 +1,100 @@
+{{extend './layout.art'}} {{block 'content'}}
+<div class="articles-wrap">
+    <div class="list-wrap">
+        <div class="search-wrap">
+            <div class="search-item">
+                <input type="text" placeholder="搜索标题/标签" />
+                <button><span class="iconfont icon-add"></span></button>
+                <span class="iconfont icon-search1"></span>
+            </div>
+        </div>
+        <ul class="list-content">
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">JavaScript数据结构《队列》</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">Angular做一个笔记文章管理应用</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">JavaScript数据结构《栈》</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">VS Code插件备忘录</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">基于Node的前端项目编译时内存溢出问题</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">漫谈React组件生命周期</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">博客项目总结</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                    <div class="list-item-wrap">
+                        <span class="item-name">JavaScript数据结构《队列》</span>
+                        <span>2018/02/07 13:25</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-wrap">
+                        <span class="item-name">Angular做一个笔记文章管理应用</span>
+                        <span>2018/02/07 13:25</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-wrap">
+                        <span class="item-name">JavaScript数据结构《栈》</span>
+                        <span>2018/02/07 13:25</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-wrap">
+                        <span class="item-name">VS Code插件备忘录</span>
+                        <span>2018/02/07 13:25</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-wrap">
+                        <span class="item-name">基于Node的前端项目编译时内存溢出问题</span>
+                        <span>2018/02/07 13:25</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-wrap">
+                        <span class="item-name">漫谈React组件生命周期</span>
+                        <span>2018/02/07 13:25</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item-wrap">
+                        <span class="item-name">博客项目总结</span>
+                        <span>2018/02/07 13:25</span>
+                    </div>
+                </li>
+        </ul>
+    </div>
+    <div class="main-content"></div>
+</div>
+{{/block}}
