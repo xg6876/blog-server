@@ -1,5 +1,7 @@
 <div class="menu-wrap">
-    <div class="logo-wrap"></div>
+    <div class="logo-wrap">
+        <span><i class="iconfont icon-logo"></i><i>x.g blog</i></span>
+    </div>
     <ul>
         <li class="menu-item">
             <span class="iconfont icon-article"></span>

@@ -5,7 +5,7 @@
             <div class="search-item">
                 <input type="text" placeholder="搜索标题/标签" />
                 <button><span class="iconfont icon-add"></span></button>
-                <span class="iconfont icon-search1"></span>
+                <span class="iconfont icon-search"></span>
             </div>
         </div>
         <ul class="list-content">

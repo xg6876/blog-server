@@ -3,6 +3,18 @@
     background:linear-gradient(#27ADD0, #1D87BB 65%, #105799);
     .logo-wrap{
         height: 135px;
+        line-height: 130px;
+        padding-left: 20px;
+        color: #ffffff;
+        font-size: 18px;
+        .iconfont{
+            margin-right: 16px;
+            font-size: 36px;
+            opacity: .8;
+        }
+        i{
+            display: inline-block;
+        }
     }
     .menu-item{
         color: white;
