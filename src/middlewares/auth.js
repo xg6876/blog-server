@@ -10,7 +10,7 @@ const auth = {
     },
     async checkToken(ctx, next) {
         const authorization = ctx.get('authorization')||ctx.cookies.get('authorization');
-        if (authorization === '') {
+        if (!authorization) {
             ctx.throw(401, 'token invalid');
         }
         const token = authorization.split(' ')[1];
