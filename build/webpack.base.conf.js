@@ -7,7 +7,8 @@ const resolve = (...paths) => {
 const config = {
     target: 'web',
     entry: {
-        index:resolve('../src/assets/js/admin/articles.js')
+        index:resolve('../src/assets/js/admin/articles.js'),
+        login:resolve('../src/assets/js/admin/login.js')
     },
     output: {
         filename: '[name].js',
