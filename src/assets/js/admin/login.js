@@ -12,7 +12,11 @@ $(function(){
                 password
             },
             success: function(res) {
-               debugger;
+               if(res.code==200){
+                   location.href='articles'
+               }else{
+                   alert(res.msg);
+               }
             },
             error: function(res) {
                 debugger;

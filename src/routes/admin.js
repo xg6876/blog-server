@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-const auth = require('../middlewares/auth.js');
+const auth = require('../middlewares/auth');
 
 const router = new Router();
 

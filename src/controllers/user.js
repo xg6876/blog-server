@@ -1,17 +1,10 @@
-const auth = require('../middlewares/auth.js');
-const config = require('../config');
+const {updateToken} = require('../middlewares/auth');
+const {auth:authConfig} = require('../config');
 
 const login=async (ctx)=>{
     const { username, password } = ctx.request.body;
     if(username==='admin'&&password==='1234'){
-        let authConfig=config.auth;
-        let token = auth.createToken({uid:1});
-        ctx.cookies.set('authorization',`Bearer ${token}`,{
-            maxAge:authConfig.jwt.exprisesIn*1000,
-            path:'/',
-            httpOnly:true
-            // domain:'.baidu.com'
-        });
+        let token = updateToken(ctx,{uid:1});
         return ctx.body={
             code:200,
             data: {
