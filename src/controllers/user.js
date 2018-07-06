@@ -1,9 +1,11 @@
+const db=require('../db');
 const {updateToken} = require('../middlewares/auth');
-const {auth:authConfig} = require('../config');
+
 
 const login=async (ctx)=>{
     const { username, password } = ctx.request.body;
-    if(username==='admin'&&password==='1234'){
+    let result = await db.users.find({username,password});
+    if(result.length){
         let token = updateToken(ctx,{uid:1});
         return ctx.body={
             code:200,

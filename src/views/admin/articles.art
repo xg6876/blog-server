@@ -1,10 +1,15 @@
-{{extend './layout.art'}} {{block 'content'}}
+{{extend './layout.art'}} {{block 'css'}}
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.css" rel="stylesheet"> {{/block}} {{block 'content'}}
 <div class="articles-wrap">
     <div class="list-wrap">
         <div class="search-wrap">
             <div class="search-item">
                 <input type="text" placeholder="搜索标题/标签" />
-                <button><span class="iconfont icon-add"></span></button>
+                <button>
+                    <span class="iconfont icon-add"></span>
+                </button>
                 <span class="iconfont icon-search"></span>
             </div>
         </div>
@@ -52,49 +57,87 @@
                 </div>
             </li>
             <li>
-                    <div class="list-item-wrap">
-                        <span class="item-name">JavaScript数据结构《队列》</span>
-                        <span>2018/02/07 13:25</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="list-item-wrap">
-                        <span class="item-name">Angular做一个笔记文章管理应用</span>
-                        <span>2018/02/07 13:25</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="list-item-wrap">
-                        <span class="item-name">JavaScript数据结构《栈》</span>
-                        <span>2018/02/07 13:25</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="list-item-wrap">
-                        <span class="item-name">VS Code插件备忘录</span>
-                        <span>2018/02/07 13:25</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="list-item-wrap">
-                        <span class="item-name">基于Node的前端项目编译时内存溢出问题</span>
-                        <span>2018/02/07 13:25</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="list-item-wrap">
-                        <span class="item-name">漫谈React组件生命周期</span>
-                        <span>2018/02/07 13:25</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="list-item-wrap">
-                        <span class="item-name">博客项目总结</span>
-                        <span>2018/02/07 13:25</span>
-                    </div>
-                </li>
+                <div class="list-item-wrap">
+                    <span class="item-name">JavaScript数据结构《队列》</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">Angular做一个笔记文章管理应用</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">JavaScript数据结构《栈》</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">VS Code插件备忘录</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">基于Node的前端项目编译时内存溢出问题</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">漫谈React组件生命周期</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-item-wrap">
+                    <span class="item-name">博客项目总结</span>
+                    <span>2018/02/07 13:25</span>
+                </div>
+            </li>
         </ul>
     </div>
-    <div class="main-content"></div>
+    <div class="main-content">
+        <div id="preview"></div>
+        <div id="edit-content">
+            <div class="title-wrap">
+                <input type="text" maxlength="50">
+            </div>
+            <div class="tag-wrap">
+                <div>
+                    <select class="tag-select">
+                        <option value="1">javascript</option>
+                        <option value="2">css</option>
+                        <option value="3">webpack</option>
+                        <option value="4">nodejs</option>
+                        <option value="5">vue</option>
+                        <option value="6">nginx</option>
+                    </select>
+                    <button class="tag-add">添加</button>
+                </div>
+                <div class="tag-list">
+                    <ul>
+                        <li>
+                            <div class="tag-item">
+                                <span>javascript</span>
+                                <i class="iconfont icon-close"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tag-item">
+                                <span>webpack</span>
+                                <i class="iconfont icon-close"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <textarea id="mde"></textarea>
+        </div>
+    </div>
 </div>
-{{/block}}
+{{/block}} {{block 'js'}}
+<script src="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js"></script> {{/block}}

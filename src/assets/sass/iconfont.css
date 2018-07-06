@@ -10,11 +10,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 723144 */
-  src: url('//at.alicdn.com/t/font_723144_qgbabrzxia.eot');
-  src: url('//at.alicdn.com/t/font_723144_qgbabrzxia.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_723144_qgbabrzxia.woff') format('woff'),
-  url('//at.alicdn.com/t/font_723144_qgbabrzxia.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_723144_qgbabrzxia.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_723144_0oy50gwgawi.eot');
+  src: url('//at.alicdn.com/t/font_723144_0oy50gwgawi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_723144_0oy50gwgawi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_723144_0oy50gwgawi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_723144_0oy50gwgawi.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -40,4 +40,6 @@
 .icon-tag:before { content: "\ec33"; }
 
 .icon-logo:before { content: "\e75b"; }
+
+.icon-close:before { content: "\e617"; }
 
