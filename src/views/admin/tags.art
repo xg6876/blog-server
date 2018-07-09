@@ -1,0 +1,23 @@
+{{extend './layout.art'}} {{block 'content'}}
+<div class="tags-wrap">
+    <div class="add-group">
+        <input id="tag-text" type="text" placeholder="请输入标签名" />
+        <a href=""><%= id %></a>
+        <button id="btn-add-tag">
+            <span class="iconfont icon-add"></span>
+        </button>
+    </div>
+    <div class="tag-list">
+        <ul>
+            {{each tags}}
+                <li>
+                    <div class="tag-item">
+                        <span>{{$value.name}}</span>
+                        <i class="iconfont icon-close" data-id="{{$value._id}}"></i>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+{{/block}}

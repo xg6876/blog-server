@@ -67,7 +67,7 @@ const config = merge(baseConfig, {
             template: resolve(__dirname, '../src/views/admin/articles.art'),
             inject: true,
             chunksSortMode: 'dependency',
-            chunks: ['vendor','runtime','index']
+            chunks: ['vendor','runtime','article']
         }),
         new HTMLPlugin({
             filename: '../dist/views/admin/login.art',
@@ -75,7 +75,15 @@ const config = merge(baseConfig, {
             inject: true,
             chunksSortMode: 'dependency',
             chunks: ['vendor','runtime','login']
+        }),
+        new HTMLPlugin({
+            filename: '../dist/views/admin/tags.art',
+            template: resolve(__dirname, '../src/views/admin/tags.art'),
+            inject: true,
+            chunksSortMode: 'dependency',
+            chunks: ['vendor','runtime','tag']
         })
+
 
     ],
     // watch: true,

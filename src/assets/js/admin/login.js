@@ -1,12 +1,17 @@
 require('./base')
 require('../../sass/admin/login.scss')
 $(function(){
+    $(document).keyup(function(event){
+        if(event.keyCode ==13){
+          $("#loginBtn").trigger("click");
+        }
+      });
     $('#loginBtn').click(()=>{
         let username=$('#userName').val();
         let password=$('#password').val();
         $.ajax({
             url: '/api/login',
-            type: 'POST',
+            type: 'post',
             data: {
                 username,
                 password

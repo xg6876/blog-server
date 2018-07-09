@@ -7,8 +7,9 @@ const resolve = (...paths) => {
 const config = {
     target: 'web',
     entry: {
-        index:resolve('../src/assets/js/admin/articles.js'),
-        login:resolve('../src/assets/js/admin/login.js')
+        article: resolve('../src/assets/js/admin/articles.js'),
+        login: resolve('../src/assets/js/admin/login.js'),
+        tag: resolve('../src/assets/js/admin/tag.js')
     },
     output: {
         filename: '[name].js',
@@ -26,6 +27,9 @@ const config = {
                 test: /\.art$/,
                 loader: 'art-template-loader',
                 include: [resolve(__dirname, '../src/views')],
+                options: {
+                    ignore: ['data'],
+                }
             },
             {
                 test: /\.css/,

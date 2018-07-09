@@ -4,16 +4,16 @@
     </div>
     <ul>
         <li class="menu-item">
-            <span class="iconfont icon-article"></span>
-            <a>文章管理</a>
+            <span class="iconfont icon-articles"></span>
+            <a path="articles">文章管理</a>
         </li>
         <li class="menu-item">
-            <span class="iconfont icon-tag"></span>
-            <a>标签管理</a>
+            <span class="iconfont icon-tags"></span>
+            <a path="tags">标签管理</a>
         </li>
         <li class="menu-item">
             <span class="iconfont icon-profile"></span>
-            <a>个人中心</a>
+            <a path="profile">个人中心</a>
         </li>
         <li class="menu-item">
             <span class="iconfont icon-archives"></span>

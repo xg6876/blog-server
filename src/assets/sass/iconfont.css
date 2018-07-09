@@ -35,9 +35,9 @@
 
 .icon-profile:before { content: "\e602"; }
 
-.icon-article:before { content: "\e603"; }
+.icon-articles:before { content: "\e603"; }
 
-.icon-tag:before { content: "\ec33"; }
+.icon-tags:before { content: "\ec33"; }
 
 .icon-logo:before { content: "\e75b"; }
 
