@@ -28,7 +28,7 @@ function bindEvent() {
                 },
                 success: function (res) {
                     if (res.code == 200) {
-                        //    location.reload();
+                        location.reload();
                     } else {
                         alert(res.msg);
                     }
@@ -39,4 +39,27 @@ function bindEvent() {
             });
         }
     });
+
+    $(document).on('click', '.tag-item .icon-close', function(){
+        let id = $(this).data('id');
+        if (id) {
+            $.ajax({
+                url: '/api/tag',
+                type: 'delete',
+                data: {
+                    id
+                },
+                success: function (res) {
+                    if (res.code == 200) {
+                        location.reload();
+                    } else {
+                        alert(res.msg);
+                    }
+                },
+                error: function (res) {
+
+                }
+            })
+        }
+    })
 }

@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog控制台</title>
-    {{block 'css'}}{{/block}}
+    <% block('css', function(){ %> <% }) %>
 </head>
 
 <body>
     <div class="container">
         <div class="left-wrap">
-            {{include './menu.art'}}
+            <% include('./menu.art') %>
         </div>
         <div class="right-wrap">
             <div class="header-wrap"></div>
             <div class="main-wrap">
-                {{block 'content'}}{{/block}}
+                <% block('content', function(){ %> <% }) %>
             </div>
         </div>
     </div>
-    {{include '../includes/script.art'}}
-    {{block 'js'}}{{/block}}
+    <% include('../includes/script.art') %>
+    <% block('js', function(){ %> <% }) %>
 </body>
 
 </html>

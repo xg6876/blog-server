@@ -9,14 +9,16 @@ router.get('/login',async (ctx)=>{
 })
 
 router.get('/articles',auth.checkToken,async (ctx)=>{
-    await ctx.render(ctx.path.substr(1));
+    let tags=await tag.getTag();
+    await ctx.render(ctx.path.substr(1),{
+        tags
+    });
 })
 
 router.get('/tags',auth.checkToken,async (ctx)=>{
     let tags=await tag.getTag();
     await ctx.render(ctx.path.substr(1),{
-        id:123,
-        data:tags
+        tags
     });
 })
 

@@ -6,17 +6,16 @@ const getTag=async (ctx)=>{
 
 const addTag=async (ctx)=>{
     const { tagName } = ctx.request.body;
-    let result = await db.tags.find({tagName});
+    let result = await db.tags.find({name:tagName});
     if(result.length){
-        let token = updateToken(ctx,{uid:1});
-        return ctx.body={
+        ctx.body={
             code:10015,
             msg:'数据已存在'
         };
     }else{
         let data={name:tagName};
         result=await db.tags.insert(data);
-        return ctx.body={
+        ctx.body={
             code:200,
             data: {
                 id:data._id
@@ -25,7 +24,23 @@ const addTag=async (ctx)=>{
     }
 }
 
+const delTag=async (ctx)=>{
+    const { id } = ctx.request.body;
+    let result = await db.tags.remove({_id:db.getObjectId(id)});
+    if(result.result.ok){
+        ctx.body={
+            code:200
+        };
+    }else{
+        ctx.body={
+            code:10016,
+            msg:'操作失败'
+        };
+    }
+}
+
 module.exports={
     getTag,
-    addTag
+    addTag,
+    delTag
 }

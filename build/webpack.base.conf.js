@@ -1,4 +1,6 @@
 const path = require('path')
+const template = require('art-template');
+template.defaults.rules.pop();
 
 const resolve = (...paths) => {
     return path.resolve(__dirname, ...paths)
@@ -26,10 +28,7 @@ const config = {
             {
                 test: /\.art$/,
                 loader: 'art-template-loader',
-                include: [resolve(__dirname, '../src/views')],
-                options: {
-                    ignore: ['data'],
-                }
+                include: [resolve(__dirname, '../src/views')]
             },
             {
                 test: /\.css/,

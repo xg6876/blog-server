@@ -10,7 +10,7 @@ router.post('/login',user.login)
 
 router.get('/tag',auth.checkToken,tag.getTag)
 router.post('/tag',auth.checkToken,tag.addTag)
-// router.delete('/tag',auth.checkToken,tag.delTag)
+router.delete('/tag',auth.checkToken,tag.delTag)
 
 module.exports = router;
 /* HTTP动词

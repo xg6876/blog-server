@@ -8,7 +8,6 @@ const handler = {
         if (key in target) {
             return target[key];
         } else {
-            console.log(key);
             target._collectionName = key;
             return target;
         }
@@ -55,6 +54,8 @@ class DB {
                         resolve(result);
                     }
                 })
+            }).catch((err)=>{
+                reject(err);
             })
         })
     }
@@ -69,6 +70,8 @@ class DB {
                         resolve(result);
                     }
                 })
+            }).catch((err)=>{
+                reject(err);
             })
         })
     }
@@ -83,6 +86,8 @@ class DB {
                         resolve(result);
                     }
                 })
+            }).catch((err)=>{
+                reject(err);
             })
         })
     }
@@ -99,7 +104,8 @@ class DB {
                             resolve(docs);
                         }
                     });
-
+            }).catch((err)=>{
+                reject(err);
             })
         })
     }

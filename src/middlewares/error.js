@@ -5,7 +5,6 @@ exports.handlerError = async (ctx, next) => {
         let code = err.statusCode || 500;
         let msg = err.message;
         if (code === 500) {
-            console.log(err.message);
             msg = '发生系统错误';
         }
         if(code===500){

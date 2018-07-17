@@ -1,7 +1,9 @@
-{{extend './layout.art'}} {{block 'css'}}
-
+<% extend('./layout.art') %>
+<% block('css', function(){ %>
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.css" rel="stylesheet"> {{/block}} {{block 'content'}}
+<link href="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.css" rel="stylesheet">
+<% }) %>
+<% block('content', function(){ %>
 <div class="articles-wrap">
     <div class="list-wrap">
         <div class="search-wrap">
@@ -104,34 +106,19 @@
         <div id="preview"></div>
         <div id="edit-content">
             <div class="title-wrap">
-                <input type="text" maxlength="50">
+                <input type="text" maxlength="50" placeholder="文章标题">
             </div>
             <div class="tag-wrap">
                 <div>
                     <select class="tag-select">
-                        <option value="1">javascript</option>
-                        <option value="2">css</option>
-                        <option value="3">webpack</option>
-                        <option value="4">nodejs</option>
-                        <option value="5">vue</option>
-                        <option value="6">nginx</option>
+                        {{each tags}}
+                        <option value="{{@$value._id}}">{{@$value.name}}</option>
+                        {{/each}}
                     </select>
                     <button class="tag-add">添加</button>
                 </div>
                 <div class="tag-list">
                     <ul>
-                        <li>
-                            <div class="tag-item">
-                                <span>javascript</span>
-                                <i class="iconfont icon-close"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="tag-item">
-                                <span>webpack</span>
-                                <i class="iconfont icon-close"></i>
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -139,5 +126,8 @@
         </div>
     </div>
 </div>
-{{/block}} {{block 'js'}}
-<script src="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js"></script> {{/block}}
+<% }) %>
+
+<% block('js', function(){ %>
+<script src="https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js"></script>
+<% }) %>
