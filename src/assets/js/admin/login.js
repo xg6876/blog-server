@@ -1,5 +1,5 @@
-require('./base')
-require('../../sass/admin/login.scss')
+import './base'
+import '../../sass/admin/login.scss'
 $(function(){
     $(document).keyup(function(event){
         if(event.keyCode ==13){
@@ -24,8 +24,8 @@ $(function(){
                }
             },
             error: function(res) {
-                debugger;
-             }
+             
+            }
         });
     });
 })

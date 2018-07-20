@@ -1,5 +1,5 @@
-require('./base')
-require('../../sass/admin/tag.scss')
+import './base'
+import '../../sass/admin/tag.scss'
 
 $(function () {
     // devtools = /./;

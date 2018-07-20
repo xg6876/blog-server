@@ -15,98 +15,13 @@
                 <span class="iconfont icon-search"></span>
             </div>
         </div>
-        <ul class="list-content">
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">JavaScript数据结构《队列》</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">Angular做一个笔记文章管理应用</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">JavaScript数据结构《栈》</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">VS Code插件备忘录</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">基于Node的前端项目编译时内存溢出问题</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">漫谈React组件生命周期</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">博客项目总结</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">JavaScript数据结构《队列》</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">Angular做一个笔记文章管理应用</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">JavaScript数据结构《栈》</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">VS Code插件备忘录</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">基于Node的前端项目编译时内存溢出问题</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">漫谈React组件生命周期</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-            <li>
-                <div class="list-item-wrap">
-                    <span class="item-name">博客项目总结</span>
-                    <span>2018/02/07 13:25</span>
-                </div>
-            </li>
-        </ul>
+        <ul class="list-content"></ul>
     </div>
     <div class="main-content">
         <div id="preview"></div>
         <div id="edit-content">
             <div class="title-wrap">
-                <input type="text" maxlength="50" placeholder="文章标题">
+                <input id="title" type="text" maxlength="50" placeholder="文章标题">
             </div>
             <div class="tag-wrap">
                 <div>
@@ -120,6 +35,11 @@
                 <div class="tag-list">
                     <ul>
                     </ul>
+                </div>
+                <div class="btnGroup">
+                    <button class="btn btnGroup_save">保存</button>
+                    <button class="btn btnGroup_del">删除</button>
+                    <button class="btn btnGroup_publish">发布</button>
                 </div>
             </div>
             <textarea id="mde"></textarea>

@@ -1,7 +1,7 @@
-require('../../sass/iconfont.css');
-require('../../sass/base.scss');
-require('../../sass/admin/admin.scss');
-require('../../sass/admin/menu.scss');
+import '../../sass/iconfont.css'
+import '../../sass/base.scss'
+import '../../sass/admin/admin.scss'
+import '../../sass/admin/menu.scss'
 
 $(function(){
     let path=location.pathname.substr(7);

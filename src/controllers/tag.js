@@ -15,12 +15,19 @@ const addTag=async (ctx)=>{
     }else{
         let data={name:tagName};
         result=await db.tags.insert(data);
-        ctx.body={
-            code:200,
-            data: {
-                id:data._id
-            }
-        };
+        if(result.result.ok){
+            ctx.body={
+                code:200,
+                data: {
+                    id:data._id
+                }
+            };
+        }else{
+            ctx.body={
+                code:10016,
+                msg:'操作失败'
+            };
+        }
     }
 }
 
